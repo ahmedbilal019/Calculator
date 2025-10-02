@@ -1,0 +1,75 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-container {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding: 25px 0px;
+  background-color: black;
+  border-radius: 10px;
+}
+.btn-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+.display {
+  padding-bottom: 20px;
+}
+.display input {
+  text-align: right;
+  padding: 5px 5px;
+  width: 225px;
+  height: 35px;
+  font-size: 22px;
+  background-color: black;
+  color: white;
+  outline: none;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+button {
+  padding: 10px 25px;
+  background-color: gray;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: large;
+}
+button:hover {
+  cursor: pointer;
+  background-color: lightgray;
+  color: black;
+}
+
+#btnAdd,
+#btnMulti,
+#btnDev,
+#btnSub,
+#btnequal {
+  background-color: green;
+}
+#btnClear {
+  background-color: red;
+}
+#btnClear:hover {
+  background-color: rgb(226, 111, 103);
+}
+#btnequal:hover,
+#btnAdd:hover,
+#btnSub:hover,
+#btnDev:hover,
+#btnMulti:hover {
+  background-color: rgb(41, 238, 41);
+}

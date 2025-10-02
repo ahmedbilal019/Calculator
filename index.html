@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <h1 id="changed">Hello World</h1>
+      <p class="changed">This is a sample HTML file.</p>
+      <h1 class="changed">Hello World</h1>
+      <p class="changed">This is a sample HTML file.</p>
+      <!-- input value by id in dome manipulation -->
+      <input type="text" id="inputField" value="Sample Input" />
+      <button>Click Me</button>
+      <p id="inputedValue"></p>
+    </div>
+    <script>
+      // DOM Manipulation using JavaScript
+      console.log(document.getElementById("container").innerText);
+      // Change text content by ID
+      document.getElementById("changed").textContent = "Hello Universe";
+
+      // Change text content by Class Name
+      const elements = document.getElementsByClassName("changed");
+      for (let i = 0; i < elements.length; i++) {
+        elements[i].textContent = "This is an updated sample HTML file.";
+      }
+
+      // Change input value by ID by onchnage event
+      document
+        .getElementById("inputField")
+        .addEventListener("change", function () {
+          console.log("Input changed to: " + this.value);
+
+          document.getElementById("inputedValue").textContent =
+            "You entered: " + this.value;
+        });
+      console.log(document.getElementById("inputField").value);
+
+      // Add event listener to button
+      document.querySelector("button").addEventListener("click", function () {
+        alert("Button Clicked!");
+      });
+
+      // Change style of elements
+      let textcontent = document.getElementById("changed");
+      textcontent.style.backgroundColor = "blue";
+      textcontent.style.color = "white";
+
+      for (let i = 0; i < elements.length; i++) {
+        elements[i].style.fontWeight = "bold";
+        elements[i].style.fontSize = "30px";
+      }
+    </script>
+  </body>
+</html>
